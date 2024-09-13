@@ -1,0 +1,16 @@
+[package]
+name = "greatest_common_divisor"
+authors = ["Proudmuslim <proudmuslim-dev@protonmail.com>"]
+version = "0.0.1"
+edition = "2021"
+default-run = "greatest_common_divisor"
+
+[workspace]
+members = ["kernel"]
+
+[dependencies]
+ovmf-prebuilt = "0.1.0-alpha"
+
+[build-dependencies]
+kernel = { path = "kernel", artifact = "bin", target = "x86_64-unknown-none" }
+bootloader = "0.11.3"
