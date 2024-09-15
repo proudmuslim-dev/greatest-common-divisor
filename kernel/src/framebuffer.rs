@@ -53,8 +53,9 @@ impl<'f> Display<'f> {
         let (x, y) = {
             let c: (i32, i32) = coordinates.into();
 
-            (c.0 as usize, height - c.1 as usize) // Invert Y value in order to make coordinates
-                                                  // work as expected
+            (c.0 as usize, height - c.1 as usize) // Invert Y value in order to
+                                                  // make coordinates work as
+                                                  // expected
         };
 
         if (0..width).contains(&x) && (0..height).contains(&y) {
